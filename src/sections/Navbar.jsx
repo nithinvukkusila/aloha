@@ -19,17 +19,24 @@ const Navbar = () => {
       <div className="company-logo">
         <img src={logo} alt="company logo" />
       </div>
+      {/* desktop-nav */}
       <div className="desktop-nav">
         <ul>
           {navItems.map((item, index) => {
-            return <li key={index}>{item}</li>;
+            return (
+              <li key={index}>
+                {" "}
+                <a href="#">{item}</a>{" "}
+              </li>
+            );
           })}
         </ul>
         <div className="book-a-trip">
           <Button customStyle={customStyle} text="Book a trip" />
         </div>
       </div>
-      <div className={`mobile-nav ${showMenu ? 'open' : ''}`}>
+      {/* mobile-nav */}
+      <div className={`mobile-nav ${showMenu ? "open" : ""}`}>
         <div className="menu-icon" onClick={() => toggleMenu()}>
           <img src={menu} />
         </div>
@@ -37,11 +44,16 @@ const Navbar = () => {
           <div className="dropdown">
             <div className="menu-items">
               <div onClick={toggleMenu} className="close-icon">
-                <img  src={close} alt="close" />
+                <img src={close} alt="close" />
               </div>
               <ul>
                 {navItems.map((item, index) => {
-                  return <li key={index}>{item}</li>;
+                  return (
+                    <li key={index}>
+                      {" "}
+                      <a href="#">{item}</a>{" "}
+                    </li>
+                  );
                 })}
                 <li>
                   <Button customStyle={customStyle} text="Book a trip" />

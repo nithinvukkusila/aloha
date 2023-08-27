@@ -4,7 +4,7 @@
 }
 
 :root {
-  --font-size-large: 9.5vw;
+  --font-size-large: 9vw;
   --font-size-medium: 16px;
   --font-weight-bolder: 700;
   --white: #fff;
@@ -20,6 +20,11 @@ p {
 ul li {
   list-style-type: none;
   font-size: var(--font-size-medium);
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .light-bg {
@@ -43,7 +48,7 @@ button {
 
 .banner {
   background-image: url("../src/assets/images/banner_Image.jpeg");
-  height: 72vh;
+  height: 70vh;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -55,17 +60,17 @@ button {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bolder);
   color: white;
-  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60%;
   line-height: 1em;
+  width: 100%;
+  height: 60%;
 }
 
 .heading p:nth-child(1) {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 /*  navbar  */
@@ -73,8 +78,8 @@ button {
 nav {
   display: flex;
   background: var(--white);
-  width: 74%;
-  margin: 30px auto;
+  min-width: 74%;
+  margin: 30px 20px;
   align-items: center;
   border-radius: var(--default-border-radius);
   padding: 12px 24px;
@@ -91,7 +96,14 @@ nav .desktop-nav ul {
   gap: 3em;
   align-items: center;
   text-transform: capitalize;
+  flex-wrap: wrap;
+  margin-right: 30px;
 }
+nav .desktop-nav ul li:hover {
+  font-weight: var(--font-weight-bolder);
+  transition: all 0.3s;
+}
+
 nav .desktop-nav .book-a-trip {
   margin-left: auto;
 }
@@ -100,7 +112,7 @@ nav .mobile-nav {
   display: none;
 }
 .container {
-  max-width: 75%;
+  width: 75%;
   margin: 40px auto;
 }
 
@@ -177,8 +189,19 @@ nav .mobile-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;
+  padding: 12px 24px;
   border-radius: var(--border-radius-medium);
+  cursor: pointer;
+}
+.category-guide-info .category-info .categories li img {
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 50%;
+}
+.category-guide-info .category-info .categories li:hover {
+  background: #008080;
+  color: var(--white) !important;
+  transition: all 0.3s;
 }
 
 .travel-guide .guide {
@@ -212,13 +235,21 @@ nav .mobile-nav {
 }
 footer {
   background-color: black;
-  padding: 20px 200px;
+  padding: 24px;
+}
+.footer {
+  width: 80%;
+  margin: auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .heading {
+    font-size: 13vw;
+    height: 90%;
+  }
   nav {
     justify-content: space-between;
-    width: 90%;
+    width: -webkit-fill-available;
     border-radius: 0;
     margin: 0;
   }
@@ -266,8 +297,10 @@ footer {
     float: right;
     cursor: pointer;
   }
-  .container {
-    max-width: 90%;
+  .container,
+  .category-guide-info,
+  .footer {
+    width: 90%;
   }
 
   .highlights {
@@ -277,9 +310,7 @@ footer {
     flex: 0 0 100%;
     margin-bottom: 20px;
   }
-  .category-guide-info {
-    width: 90%;
-  }
+
   .travel-guide .guide {
     align-items: top;
   }

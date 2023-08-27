@@ -1,4 +1,4 @@
-import Categories from "../sections/Categories";
+import CategoriesAndGuide from "../sections/CategoriesAndGuide";
 import Footer from "../sections/Footer";
 import Highlights from "../sections/Highlights";
 import Navbar from "../sections/Navbar";
@@ -14,7 +14,7 @@ const Home = () => {
         </div>
       </div>
       <Highlights />
-      <Categories />
+      <CategoriesAndGuide />
       <Footer />
     </>
   );
