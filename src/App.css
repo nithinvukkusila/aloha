@@ -146,6 +146,9 @@ nav .mobile-nav {
   padding: 0 24px;
   text-transform: capitalize;
 }
+.card .info h2 {
+  color: #008080;
+}
 .card .right-arrow {
   position: absolute;
   right: 24px;
