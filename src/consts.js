@@ -11,12 +11,12 @@ export const highlights = [
   {
     title: "hula",
     desc: "Try it yourself",
-    image: volcano,
+    image: hula,
   },
   {
     title: "volcanoes",
     desc: "Volcanic conditions can change at any time.",
-    image: hula,
+    image: volcano,
   },
 ];
 
